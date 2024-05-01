@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Message for you</title> 
+  <link rel="stylesheet" href="style.css"> 
+ </head> 
+ <body> 
+  <div class="wrapper"> 
+   <h2 class="message">Happy Birthday!</h2> <!-- Added message -->
+   <div class="message-btn-group"> <!-- Added message button group -->
+     <button class="message-okay-btn">Okay</button>
+   </div>
+   <h2 class="question">You like me?</h2> 
+   <img class="gif" alt="gif" src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gifyou.webp"> 
+   <div class="btn-group"> <button class="yes-btn">Yes</button> <button class="no-btn">No</button> 
+   </div> 
+  </div> 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const messageOkayBtn = document.querySelector('.message-okay-btn');
+      const messageSection = document.querySelector('.message');
+      const messageBtnGroup = document.querySelector('.message-btn-group');
+      const questionSection = document.querySelector('.question');
+      const gifImage = document.querySelector('.gif');
+      const btnGroup = document.querySelector('.btn-group');
+
+      // Hide the confession section initially
+      questionSection.style.display = 'none';
+      gifImage.style.display = 'none';
+      btnGroup.style.display = 'none';
+
+      // Show confession section when Okay button is clicked
+      messageOkayBtn.addEventListener('click', function() {
+        messageSection.style.display = 'none';
+        messageBtnGroup.style.display = 'none';
+        questionSection.style.display = 'block';
+        gifImage.style.display = 'block';
+        btnGroup.style.display = 'flex';
+      });
+    });
+  </script>
+ </body>
+</html>
